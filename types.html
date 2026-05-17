@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Types | CryptoClarity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="logoFF.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="common.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar-inverse navbar-dark bg-black"
+        style="background-color: #000000 !important; margin-bottom: 0px !important; padding-bottom: 0px !important; border: none !important;">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"
+                target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="menu">
+                <li class="links"><a href="#" id="infoMark" onclick="extra()"><i class="fa fa-info-circle fa-2x"
+                        style="color: white"></i></a></li>
+                <a href="#" id="homei" onclick="home()">
+                    <img src="menuLogo.JPG" alt="Logo" class="menu-logo-img">
+                </a>
+                <li class="links"><a class="nav-word" onclick="intro()">Introduction</a></li>
+                <li class="links"><a class="nav-word" onclick="purpose()">Purpose</a></li>
+                <li class="links"><a class="nav-word" onclick="dlt()">DLTs</a></li>
+                <li class="links"><a class="nav-word" onclick="history()">History</a></li>
+                <li class="links"><a class="nav-word" onclick="types()" style="color: #5deb7a;">Types</a></li>
+                <li class="links"><a class="nav-word" onclick="risks()">Risks</a></li>
+                <li class="links"><a class="nav-word" onclick="quiz()">Quiz</a></li>
+                <li class="links"><a class="nav-word" onclick="gloss()">Glossary</a></li>
+                <li class="links"><a href="#" id="qMark" onclick="signup()"><i class="fa fa-user fa-2x"
+                        style="color: white"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="crypto-hero-section2">
+        <div class="crypto-hero-container2">
+            <h1 class="crypto-hero-title2">Types of Cryptocurrencies and their Prices</h1>
+            <p class="crypto-hero-subtitle2">Click on a coin to learn about it, and the prices automatically update
+                every 30 seconds.</p>
+        </div>
+    </section>
+    <h4 id="header"></h4>
+    <div id="crypto-wrapper">
+        <span class="image-container">
+            <div id="type_1">
+                <div class="crypto-grid">
+                    <div class="crypto-tile" data-coin="bitcoin">
+                        <center>
+                            <img id="type_image1" src="bitcoin.png" alt="Bitcoin icon">
+                        </center>
+                        <h3 style="color:#f28b0c;">Bitcoin</h3>
+                        <p class="live-price" id="price-bitcoin">Loading...</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="type_2">
+                <div class="crypto-grid">
+                    <div class="crypto-tile" data-coin="ethereum">
+                        <center>
+                            <img id="type_image2" src="ethereum.png" alt="Etherium icon">
+                        </center>
+                        <h3 style="color:#464957;">Ethereum</h3>
+                        <p class="live-price" id="price-ethereum">Loading...</p>
+
+                    </div>
+                </div>
+            </div>
+            <div id="type_1">
+                <div class="crypto-grid">
+                    <div class="crypto-tile" data-coin="cardano">
+                        <center>
+                            <img id="type_image3" src="cardano.png" alt="Bitcoin icon">
+                        </center>
+                        <h3 style="color:#011370;">Cardano</h3>
+                        <p class="live-price" id="price-cardano">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+        <span class="image-container">
+            <div id="type_2">
+                <div class="crypto-grid">
+                    <div class="crypto-tile" data-coin="litecoin">
+                        <center>
+                            <img id="type_image4" src="litecoin.jpg" alt="Etherium icon">
+                        </center>
+                        <h3 style="color:#485fd4;">Litecoin</h3>
+                        <p class="live-price" id="price-litecoin">Loading...</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="type_2">
+                <div class="crypto-grid">
+                    <div class="crypto-tile" data-coin="solana">
+                        <center>
+                            <img id="type_image5" src="solana.jpg" alt="Etherium icon">
+                        </center>
+                        <h3 style="color:#33c4a7;">Solana</h3>
+                        <p class="live-price" id="price-solana">Loading...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="type_2">
+                <div class="crypto-grid">
+                    <div class="crypto-tile" data-coin="xrp">
+                        <center>
+                            <img id="type_image6" src="xrp.webp" alt="Etherium icon">
+                        </center>
+                        <h3 style="color:#000000;">XRP</h3>
+                        <p class="live-price" id="price-xrp">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+    <div class="info-panel" id="infoPanel">
+        <button class="close-btn">✕</button>
+        <div class="panel-body" id="panelContent"></div>
+    </div>
+    <br>
+    <footer class="hl-footer">
+        <div class="hl-footer-container">
+            <div class="hl-brand-row">
+                <img src="menuLogo.JPG" alt="Logo" class="menu-logo-img" style="height:55px;">
+                <div class="hl-social-links">
+                    <a href="#" class="top-scroll-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="top-scroll-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="top-scroll-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="top-scroll-link" aria-label="Pinterest">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.966 1.406-5.966s-.359-.72-.359-1.781c0-1.663.967-2.907 2.17-2.907 1.023 0 1.518.769 1.518 1.689 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.743-1.37l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hl-main-content">
+                <div class="hl-left-panel">
+                    <div class="hl-newsletter-box">
+                        <h3>Get our free weekly newsletter</h3>
+                        <p>Financial tips, market updates, and data-driven insights delivered right into your inbox.</p>
+                        <form class="hl-newsletter-form" onsubmit="handleSignUp(event)">
+                            <input type="email" placeholder="Enter your email" required aria-label="Email address">
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>"
+                    <div class="hl-copyright">© 2026 CryptoClarity Team. All rights reserved. The
+                        CryptoClarity website is created for the PA Media and Design Competition. Our
+                        website content is for informational purposes only. CryptoClarity does not
+                        provide financial advice.
+                    </div>
+                </div>
+                <div class="hl-links-grid">
+                    <div class="hl-links-column">
+                        <ul>
+                            <li><a href="#" class="top-scroll-link2">About Us</a></li>
+                            <li><a href="#" class="top-scroll-link">Contact Us</a></li>
+                            <li><a href="#" class="top-scroll-link">Terms of Use</a></li>
+                            <li><a href="#" class="top-scroll-link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="hl-links-column">
+                        <ul>
+                            <li><a href="#" class="top-scroll-link">Privacy Settings</a></li>
+                            <li><a href="#" class="top-scroll-link">Cookie Settings</a></li>
+                            <li><a href="#" class="top-scroll-link">Content Integrity</a></li>
+                            <li><a href="#" class="top-scroll-link">Newsletters</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="hl-modal-overlay" id="successModal">
+        <div class="hl-modal">
+            <div class="hl-modal-icon">✓</div>
+            <h4>Subscription Successful!</h4>
+            <p>Thank you for joining our community. You will now receive tips & updates directly in your inbox.</p>
+            <button class="hl-modal-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    const modalOverlay = document.getElementById('successModal');
+
+    // Trigger custom HTML modal wrapper instead of system window
+    function handleSignUp(event) {
+        event.preventDefault();
+        modalOverlay.classList.add('active');
+    }
+
+    // Close custom HTML modal
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+    }
+
+    // Click outside modal content box to close
+    modalOverlay.addEventListener('click', function (e) {
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    });
+
+    const tiles = document.querySelectorAll('.crypto-tile');
+
+    tiles.forEach(tile => {
+        tile.addEventListener('click', () => {
+            tiles.forEach(t => t.classList.remove('active'));
+            tile.classList.add('active');
+            openPanel(tile.dataset.coin);
+        });
+    });
+
+    const panel = document.getElementById('infoPanel');
+    const panelContent = document.getElementById('panelContent');
+
+    function openPanel(coin) {
+        panel.classList.add('open');
+        document.getElementById('crypto-wrapper')
+            .classList.add('panel-open');
+
+        if (coin === 'bitcoin') {
+            panelContent.innerHTML = `
+        <br>
+        <h2>Bitcoin (BTC)</h2>
+        <br>
+        <br>
+        <img style="width:200px;" id="type_image1" src="bitcoin.png" alt="Bitcoin icon">
+        <br>
+        <br>
+        <br>
+        <ul style="text-align: left; margin-left:1px; min-width:245px;">
+          <li style="font-size:16px;">The original cryptocurrency</li>
+          <li style="font-size:16px;">Limited supply (21 million)</li>
+          <li style="font-size:16px;">Own blockchain</li>
+          <li style="font-size:16px;">Often compared to “digital gold”</li>
+        </ul>
+      `;
+        } else if (coin === 'ethereum') {
+            panelContent.innerHTML = `
+        <br>
+        <h2>Ethereum (ETH)</h2>
+        <br>
+        <img style="width:130px;" id="type_image1" src="ethereum.png" alt="Bitcoin icon">
+        <br>
+        <br>
+        <br>
+        <ul style="text-align: left; margin-left:10px; min-width:235px;">
+          <li style="font-size:16px;">Blockchain platform that supports smart contracts</li>
+          <li style="font-size:16px;">Allows developers to build decentralized applications (dApps)</li>
+          <li style="font-size:16px;">Second-largest cryptocurrency by market value</li>
+        </ul>
+      `;
+        } else if (coin === 'cardano') {
+            panelContent.innerHTML = `
+        <br>
+        <h2>Cardano (ADA)</h2>
+        <br>
+        <img style="width:140px;" id="type_image1" src="cardano.png" alt="Bitcoin icon">
+        <br>
+        <br>
+        <br>
+        <ul style="text-align: left; margin-left:2px; min-width:235px;">
+          <li style="font-size:16px;">Research-driven blockchain built with academic input</li>
+          <li style="font-size:16px;">Uses an energy-efficient proof-of-stake system</li>
+          <li style="font-size:16px;">Focuses on security, sustainability, and scalability</li>
+        </ul>
+      `;
+        } else if (coin === 'litecoin') {
+            panelContent.innerHTML = `
+        <br>
+        <h2>Litecoin (LTC)</h2>
+        <br>
+        <img style="width:200px;" id="type_image1" src="litecoin.jpg" alt="Bitcoin icon">
+        <br>
+        <br>
+        <br>
+        <ul style="text-align: left; margin-left:20px;">
+          <li style="font-size:16px;">One of the earliest alternatives to Bitcoin</li>
+          <li style="font-size:16px;">Faster transaction times than Bitcoin</li>
+          <li style="font-size:16px;">Often called “digital silver”</li>
+        </ul>
+      `;
+        } else if (coin === 'solana') {
+            panelContent.innerHTML = `
+        <br>
+        <h2>Solana (SOL)</h2>
+        <br>
+        <img style="width:170px;" id="type_image1" src="solana.jpg" alt="Bitcoin icon">
+        <br>
+        <br>
+        <ul style="text-align: left; margin-left:10px;">
+          <li style="font-size:16px;" >Known for very fast transaction speeds</li>
+          <li style="font-size:16px;">Designed for high-performance decentralized apps</li>
+          <li style="font-size:16px;">Low transaction fees compared to many blockchains</li>
+        </ul>
+      `;
+        } else if (coin === 'xrp') {
+            panelContent.innerHTML = `
+        <br>
+        <h2>XRP (XRP)</h2>
+        <br>
+        <img style="width:140px;" id="type_image1" src="xrp.webp" alt="Bitcoin icon">
+        <br>
+        <br>
+        <br>
+        <ul style="text-align: left; margin-left:5px;">
+          <li style="font-size:16px;">Designed for fast international payments</li>
+          <li style="font-size:16px;">Focuses on helping financial institutions transfer money</li>
+          <li style="font-size:16px;">Uses its own distributed ledger system</li>
+        </ul>
+      `;
+        }
+    }
+
+    document.querySelector('.close-btn').addEventListener('click', () => {
+        panel.classList.remove('open');
+
+        // move logos back to center
+        document.getElementById('crypto-wrapper')
+            .classList.remove('panel-open');
+
+
+        document.querySelectorAll('.crypto-tile')
+            .forEach(t => t.classList.remove('active'));
+    });
+
+    // 1. API Mapping (CoinGecko uses specific IDs)
+    const coinApiIds = {
+        'bitcoin': 'bitcoin',
+        'ethereum': 'ethereum',
+        'cardano': 'cardano',
+        'litecoin': 'litecoin',
+        'solana': 'solana',
+        'xrp': 'ripple'
+    };
+
+    // 2. Function to fetch and display prices
+    async function updateLivePrices() {
+        const ids = Object.values(coinApiIds).join(',');
+        const url = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            // Loop through our mapping to update the UI
+            for (const [key, apiId] of Object.entries(coinApiIds)) {
+                const price = data[apiId].usd;
+                const element = document.getElementById(`price-${key}`);
+                if (element) {
+                    element.innerHTML = `<strong>$${price.toLocaleString()}</strong>`;
+                }
+            }
+        } catch (error) {
+            console.error("Error fetching prices:", error);
+            // Fallback message if API fails
+            document.querySelectorAll('.live-price').forEach(el => el.innerText = "Check Connection");
+        }
+    }
+
+    // 3. Run on load and every 30 seconds
+    updateLivePrices();
+    setInterval(updateLivePrices, 30000);
+
+    document.querySelectorAll('.top-scroll-link').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    document.querySelectorAll('.top-scroll-link2').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'extra.html';
+        });
+    });
+</script>

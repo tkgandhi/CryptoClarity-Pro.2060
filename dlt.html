@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DLTs | CryptoClarity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="logoFF.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="common.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar-inverse navbar-dark bg-black"
+    style="background-color: #000000 !important; margin-bottom: 0px !important; padding-bottom: 0px !important; border: none !important;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="menu">
+        <li class="links"><a href="#" id="infoMark" onclick="extra()"><i class="fa fa-info-circle fa-2x"
+            style="color: white"></i></a></li>
+        <a href="#" id="homei" onclick="home()">
+          <img src="menuLogo.JPG" alt="Logo" class="menu-logo-img">
+        </a>
+        <li class="links"><a class="nav-word" onclick="intro()">Introduction</a></li>
+        <li class="links"><a class="nav-word" onclick="purpose()">Purpose</a></li>
+        <li class="links"><a class="nav-word" onclick="dlt()" style="color: #5deb7a;">DLTs</a></li>
+        <li class="links"><a class="nav-word" onclick="history()">History</a></li>
+        <li class="links"><a class="nav-word" onclick="types()">Types</a></li>
+        <li class="links"><a class="nav-word" onclick="risks()">Risks</a></li>
+        <li class="links"><a class="nav-word" onclick="quiz()">Quiz</a></li>
+        <li class="links"><a class="nav-word" onclick="gloss()">Glossary</a></li>
+        <li class="links"><a href="#" id="qMark" onclick="signup()"><i class="fa fa-user fa-2x"
+            style="color: white"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="crypto-hero-section2">
+    <div class="crypto-hero-container2">
+      <h1 class="crypto-hero-title2">DLTs (Distributed Ledger Technologies)</h1>
+      <p class="crypto-hero-subtitle2">Digital networks that let multiple parties record/share information
+        simultaneously without a central authority.</p>
+    </div>
+  </section>
+  <div class="dlt-container">
+    <div class="dlt-content">
+      <div class="dlt-text">
+
+        <h2 class="main-title">How They Work</h2>
+        <div class="step-indicator">Step <span id="stepNum">0</span> of 4</div>
+        <br>
+        <p id="stepText">
+          Click “Next” to see how a distributed ledger records a transaction.
+        </p>
+        <button id="nextBtn">Next Step →</button>
+      </div>
+      <div class="dlt-visual">
+        <svg class="connection-lines">
+          <line class="line broadcast-line" x1="50%" y1="15%" x2="20%" y2="45%" />
+          <line class="line broadcast-line" x1="50%" y1="15%" x2="40%" y2="45%" />
+          <line class="line broadcast-line" x1="50%" y1="15%" x2="60%" y2="45%" />
+          <line class="line broadcast-line" x1="50%" y1="15%" x2="80%" y2="45%" />
+
+          <line class="line ledger-line" x1="20%" y1="55%" x2="50%" y2="85%" />
+          <line class="line ledger-line" x1="40%" y1="55%" x2="50%" y2="85%" />
+          <line class="line ledger-line" x1="60%" y1="55%" x2="50%" y2="85%" />
+          <line class="line ledger-line" x1="80%" y1="55%" x2="50%" y2="85%" />
+        </svg>
+
+        <div class="transaction" id="transaction" style="font-size:14px">Transaction Data</div>
+
+        <div class="nodes">
+          <div class="node" style="font-size:14px">Node A</div>
+          <div class="node" style="font-size:14px">Node B</div>
+          <div class="node" style="font-size:14px">Node C</div>
+          <div class="node" style="font-size:14px">Node D</div>
+        </div>
+
+        <div class="ledger" id="ledger" style="font-size:14px">Shared Immutable Ledger</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="bg-primary teams8" data-toggle="collapse" data-target="#apptype">
+    </span>What is a Distributed Ledger?<i class="fa fa-sort-desc"></i></div>
+  <div id="apptype" class="collapse">
+    <h3 id="ahhinfo">
+      A distributed ledger is a digital record of transactions that is shared across many computers,
+      called nodes. Each node stores a copy of the ledger, so no single organization controls the data. This makes the
+      system more reliable and transparent.</h3>
+  </div>
+  <br>
+  <section id="alltypes">
+    <div class="bg-primary teams8" data-toggle="collapse" data-target="#nettype">
+      </span>How Do DLTs Record and Share Transactions? <i class="fa fa-sort-desc"></i> </div>
+    <div id="nettype" class="collapse">
+      <h3 id="ahhinfo">
+        When a transaction occurs, it is broadcast to all nodes in the network. The nodes verify the
+        transaction and update their copies of the ledger once agreement is reached. This keeps the data
+        synchronized across the network.</h3>
+    </div>
+  </section>
+  <br>
+  <section id="alltypes">
+    <div class="bg-primary teams8" data-toggle="collapse" data-target="#cloudtype">
+      </span>What Is Consensus and Why Is It Important? <i class="fa fa-sort-desc"></i> </div>
+    <div id="cloudtype" class="collapse">
+      <h3 id="ahhinfo">
+        Consensus is the process nodes use to agree on which transactions are valid. It prevents fraud
+        and ensures all participants record the same information. Different DLTs use methods like Proof
+        of Work or Proof of Stake.</h3>
+    </div>
+  </section>
+  <br>
+  <section id="alltypes">
+    <div class="bg-primary teams8" data-toggle="collapse" data-target="#citype">
+      </span>Why Are Distributed Ledgers Secure?<i class="fa fa-sort-desc"></i> </div>
+    <div id="citype" class="collapse">
+      <h3 id="ahhinfo">
+        DLTs use cryptography and decentralization to protect data. Because the ledger is shared across
+        many nodes, altering a record would require changing most copies at the same time. This makes
+        tampering extremely difficult.</h3>
+    </div>
+  </section>
+  <br>
+  <section id="alltypes">
+    <div class="bg-primary teams8" data-toggle="collapse" data-target="#iottype">
+      </span>Are All Distributed Ledgers Blockchains?<i class="fa fa-sort-desc"></i> </div>
+    <div id="iottype" class="collapse">
+      <h3 id="ahhinfo">
+        Not all distributed ledgers are blockchains. While blockchains store data in linked blocks, some
+        DLTs use other structures, such as Directed Acyclic Graphs (DAGs), to improve speed and scalability.</h3>
+    </div>
+    <br>
+    <br>
+  </section>
+  <br>
+  <footer class="hl-footer">
+    <div class="hl-footer-container">
+
+      <div class="hl-brand-row">
+        <img src="menuLogo.JPG" alt="Logo" class="menu-logo-img" style="height:55px;">
+        <div class="hl-social-links">
+          <a href="#" class="top-scroll-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z" />
+            </svg>
+          </a>
+          <a href="#" class="top-scroll-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <a href="#" class="top-scroll-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+            </svg>
+          </a>
+          <a href="#" class="top-scroll-link" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.966 1.406-5.966s-.359-.72-.359-1.781c0-1.663.967-2.907 2.17-2.907 1.023 0 1.518.769 1.518 1.689 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.743-1.37l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hl-main-content">
+        <div class="hl-left-panel">
+          <div class="hl-newsletter-box">
+            <h3>Get our free weekly newsletter</h3>
+            <p>Financial tips, market updates, and data-driven insights delivered right into your inbox.</p>
+            <form class="hl-newsletter-form" onsubmit="handleSignUp(event)">
+              <input type="email" placeholder="Enter your email" required aria-label="Email address">
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>"
+          <div class="hl-copyright">© 2026 CryptoClarity Team. All rights reserved. The
+            CryptoClarity website is created for the PA Media and Design Competition. Our
+            website content is for informational purposes only. CryptoClarity does not
+            provide financial advice.
+          </div>
+        </div>
+
+        <div class="hl-links-grid">
+          <div class="hl-links-column">
+            <ul>
+              <li><a href="#" class="top-scroll-link2">About Us</a></li>
+              <li><a href="#" class="top-scroll-link">Contact Us</a></li>
+              <li><a href="#" class="top-scroll-link">Terms of Use</a></li>
+              <li><a href="#" class="top-scroll-link">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="hl-links-column">
+            <ul>
+              <li><a href="#" class="top-scroll-link">Privacy Settings</a></li>
+              <li><a href="#" class="top-scroll-link">Cookie Settings</a></li>
+              <li><a href="#" class="top-scroll-link">Content Integrity</a></li>
+              <li><a href="#" class="top-scroll-link">Newsletters</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="hl-modal-overlay" id="successModal">
+    <div class="hl-modal">
+      <div class="hl-modal-icon">✓</div>
+      <h4>Subscription Successful!</h4>
+      <p>Thank you for joining our community. You will now receive tips & updates directly in your inbox.</p>
+      <button class="hl-modal-close" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</body>
+
+<script>
+  const modalOverlay = document.getElementById('successModal');
+
+  // Trigger custom HTML modal wrapper instead of system window
+  function handleSignUp(event) {
+    event.preventDefault();
+    modalOverlay.classList.add('active');
+  }
+
+  // Close custom HTML modal
+  function closeModal() {
+    modalOverlay.classList.remove('active');
+  }
+
+  // Click outside modal content box to close
+  modalOverlay.addEventListener('click', function (e) {
+    if (e.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  const triggers = document.querySelectorAll('[data-toggle="collapse"]');
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', function () {
+      const targetSelector = this.getAttribute('data-target');
+      const targetElement = document.querySelector(targetSelector);
+
+      const openCollapses = document.querySelectorAll('.collapse.show');
+
+      openCollapses.forEach(collapse => {
+        if (collapse !== targetElement) {
+          $(collapse).collapse('hide');
+        }
+      });
+    });
+  });
+
+  const steps = [
+    "A transaction is created and encrypted, ready to be sent to the network.",
+    "The transaction is broadcast. Data flows simultaneously to all nodes in the network.",
+    "Nodes perform validation. They check if the sender has funds and if the signature is valid.",
+    "The ledger updates globally. Every node now holds the exact same record forever."
+  ];
+
+  let currentStep = 0;
+
+  const transaction = document.getElementById("transaction");
+  const nodes = document.querySelectorAll(".node");
+  const ledger = document.getElementById("ledger");
+  const text = document.getElementById("stepText");
+  const stepNum = document.getElementById("stepNum");
+  const btn = document.getElementById("nextBtn");
+  const lines = document.querySelectorAll(".line");
+
+  btn.addEventListener("click", () => {
+    currentStep++;
+    stepNum.textContent = currentStep;
+
+    if (currentStep === 1) {
+      transaction.classList.add("show");
+      text.textContent = steps[0];
+    }
+
+    if (currentStep === 2) {
+      nodes.forEach(n => n.classList.add("active"));
+      const broadcastLines = document.querySelectorAll(".broadcast-line");
+      broadcastLines.forEach(l => l.classList.add("active"));
+      text.textContent = steps[1];
+    }
+
+    if (currentStep === 3) {
+      nodes.forEach(n => {
+        n.style.background = "#22c55e";
+        n.style.borderColor = "#22c55e";
+        n.textContent = "Verified";
+      });
+      text.textContent = steps[2];
+    }
+
+    if (currentStep === 4) {
+      ledger.classList.add("active");
+      const ledgerLines = document.querySelectorAll(".ledger-line");
+      ledgerLines.forEach(l => l.classList.add("active"));
+
+      text.textContent = steps[3];
+      btn.textContent = "Process Complete";
+      btn.style.background = "#f6c43b";
+      btn.style.color = "black";
+
+      setTimeout(() => {
+        btn.textContent = "Restart Demo";
+        btn.onclick = () => location.reload();
+      }, 500);
+    }
+  });
+  document.querySelectorAll('.top-scroll-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  document.querySelectorAll('.top-scroll-link2').forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.location.href = 'extra.html';
+    });
+  });
+</script>
