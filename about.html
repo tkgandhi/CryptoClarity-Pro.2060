@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>About Us | CryptoClarity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -14,9 +15,6 @@
 
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -35,7 +33,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="menu">
                 <li class="links"><a href="#" id="infoMark" onclick="extra()"><i class="fa fa-info-circle fa-2x"
-                    style="color: #5deb7a"></i></a></li>
+                            style="color: #5deb7a"></i></a></li>
                 <a href="#" id="homei" onclick="home()">
                     <img src="menuLogo.JPG" alt="Logo" class="menu-logo-img">
                 </a>
@@ -48,7 +46,7 @@
                 <li class="links"><a class="nav-word" onclick="quiz()">Quiz</a></li>
                 <li class="links"><a class="nav-word" onclick="gloss()">Glossary</a></li>
                 <li class="links"><a href="#" id="qMark" onclick="signup()"><i class="fa fa-user fa-2x"
-                    style="color: white"></i></a></li>
+                            style="color: white"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -60,16 +58,16 @@
     <br>
     <h3>The CryptoClarity Team</h3>
     </div>
-    <h3 id="homeinfo">The developer of this website is <span style="color: rgb(13, 13, 250)">Twisha Gandhi</span>. She is in 9th grade at Parkland
-        High School. She wanted to build this website because she loves programming and learning about
-        technology, so what better way than to build a website about a current topic (cryptocurrency)!
-        She hopes this website will prove her knowledge/skills in web-development and teach users about
-        cryptocurrency. </h3>
+    <h3 id="homeinfo">The developer of this website is <span style="color: rgb(13, 13, 250)">Twisha 
+        Gandhi</span>. She is in 9th grade at Parkland High School. She wanted to build this website 
+        because she loves programming and learning about technology, so what better way than to build a 
+        website about a current topic (cryptocurrency)! She hopes this website will prove her 
+        knowledge/skills in web-development and teach users about cryptocurrency. </h3>
     <h3 id="header">How the Website was Built:</h3>
     </hr>
-    <h3 id="homeinfo">This website was created from scratch. It's made on the web-development
-        platform Visual Studio Code using the languages HTML, CSS, and Javascript. I have included the
-        many features below on all of the pages to enhance the user experience on my website.
+    <h3 id="homeinfo">This website was created from scratch on the web-development
+        platform Visual Studio Code using the languages HTML, CSS, and Javascript. The many features 
+        below are used on the webpages to enhance the user experience on the website.
     </h3>
     <table id="typeinfo">
         <tr>
@@ -194,38 +192,35 @@
     </div>
 </body>
 
+</html>
+
 <script>
     const modalOverlay = document.getElementById('successModal');
-
-    // Trigger custom HTML modal wrapper instead of system window
     function handleSignUp(event) {
         event.preventDefault();
         modalOverlay.classList.add('active');
     }
-
-    // Close custom HTML modal
     function closeModal() {
         modalOverlay.classList.remove('active');
     }
-
-    // Click outside modal content box to close
     modalOverlay.addEventListener('click', function (e) {
         if (e.target === modalOverlay) {
             closeModal();
         }
     });
-
-    const stats = document.querySelectorAll(".stat");
-    stats.forEach((stat, index) => {
-        setTimeout(() => {
-            stat.classList.add("show");
-        }, index * 400);
+    document.querySelectorAll('.top-scroll-link').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     });
-
     document.querySelectorAll('.top-scroll-link2').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-            window.location.href = 'extra.html';
+            window.location.href = 'about.html';
         });
     });
 </script>

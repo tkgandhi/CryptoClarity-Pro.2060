@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Types | CryptoClarity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -54,8 +55,8 @@
     <section class="crypto-hero-section2">
         <div class="crypto-hero-container2">
             <h1 class="crypto-hero-title2">Types of Cryptocurrencies and their Prices</h1>
-            <p class="crypto-hero-subtitle2">Click on a coin to learn about it, and the prices automatically update
-                every 30 seconds.</p>
+            <p class="crypto-hero-subtitle2">Instantly view the current prices of major coins, and click on a coin to learn more about it
+                (prices update every 30 seconds).</p>
         </div>
     </section>
     <h4 id="header"></h4>
@@ -222,23 +223,32 @@
 
 <script>
     const modalOverlay = document.getElementById('successModal');
-
-    // Trigger custom HTML modal wrapper instead of system window
     function handleSignUp(event) {
         event.preventDefault();
         modalOverlay.classList.add('active');
     }
-
-    // Close custom HTML modal
     function closeModal() {
         modalOverlay.classList.remove('active');
     }
-
-    // Click outside modal content box to close
     modalOverlay.addEventListener('click', function (e) {
         if (e.target === modalOverlay) {
             closeModal();
         }
+    });
+    document.querySelectorAll('.top-scroll-link').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+    document.querySelectorAll('.top-scroll-link2').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'about.html';
+        });
     });
 
     const tiles = document.querySelectorAll('.crypto-tile');
@@ -356,7 +366,6 @@
     document.querySelector('.close-btn').addEventListener('click', () => {
         panel.classList.remove('open');
 
-        // move logos back to center
         document.getElementById('crypto-wrapper')
             .classList.remove('panel-open');
 
@@ -365,7 +374,6 @@
             .forEach(t => t.classList.remove('active'));
     });
 
-    // 1. API Mapping (CoinGecko uses specific IDs)
     const coinApiIds = {
         'bitcoin': 'bitcoin',
         'ethereum': 'ethereum',
@@ -375,7 +383,6 @@
         'xrp': 'ripple'
     };
 
-    // 2. Function to fetch and display prices
     async function updateLivePrices() {
         const ids = Object.values(coinApiIds).join(',');
         const url = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`;
@@ -384,7 +391,6 @@
             const response = await fetch(url);
             const data = await response.json();
 
-            // Loop through our mapping to update the UI
             for (const [key, apiId] of Object.entries(coinApiIds)) {
                 const price = data[apiId].usd;
                 const element = document.getElementById(`price-${key}`);
@@ -394,29 +400,10 @@
             }
         } catch (error) {
             console.error("Error fetching prices:", error);
-            // Fallback message if API fails
             document.querySelectorAll('.live-price').forEach(el => el.innerText = "Check Connection");
         }
     }
 
-    // 3. Run on load and every 30 seconds
     updateLivePrices();
     setInterval(updateLivePrices, 30000);
-
-    document.querySelectorAll('.top-scroll-link').forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    document.querySelectorAll('.top-scroll-link2').forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.location.href = 'extra.html';
-        });
-    });
 </script>

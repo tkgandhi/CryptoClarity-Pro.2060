@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>Quiz | CryptoClarity</title>
     <meta charset="UTF-8">
+    <title>Quiz | CryptoClarity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -59,7 +59,6 @@
     <br>
     <div class="quiz-container">
         <form id="cryptoQuiz">
-            <!-- Question 1 -->
             <div class="question-block">
                 <p class="question-text">1. Who is credited with creating Bitcoin?</p>
                 <table class="options-table">
@@ -73,12 +72,10 @@
                     </tr>
                     <tr>
                         <td><input type="radio" name="q1" value="wrong2" id="q1c"></td>
-                        <td><label for="q1c">Elon Musk</label></td>
+                        <td><label for="q1c">Tim Berners-Lee</label></td>
                     </tr>
                 </table>
             </div>
-
-            <!-- Question 2 -->
             <div class="question-block">
                 <p class="question-text">2. What is the underlying ledger technology behind most cryptocurrencies?</p>
                 <table class="options-table">
@@ -96,8 +93,6 @@
                     </tr>
                 </table>
             </div>
-
-            <!-- Question 3 -->
             <div class="question-block">
                 <p class="question-text">3. What is the process of validating transactions on a Proof-of-Work network
                     called?</p>
@@ -122,33 +117,27 @@
     </div>
     <footer class="hl-footer">
         <div class="hl-footer-container">
-
-            <!-- Row 1: Brand Name & SVG Social Logos Next To It -->
             <div class="hl-brand-row">
                 <img src="menuLogo.JPG" alt="Logo" class="menu-logo-img" style="height:55px;">
                 <div class="hl-social-links">
-                    <!-- Facebook -->
                     <a href="#" class="top-scroll-link" aria-label="Facebook">
                         <svg viewBox="0 0 24 24">
                             <path
                                 d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.8z" />
                         </svg>
                     </a>
-                    <!-- Twitter/X -->
                     <a href="#" class="top-scroll-link" aria-label="Twitter">
                         <svg viewBox="0 0 24 24">
                             <path
                                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                         </svg>
                     </a>
-                    <!-- Instagram -->
                     <a href="#" class="top-scroll-link" aria-label="Instagram">
                         <svg viewBox="0 0 24 24">
                             <path
                                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
                         </svg>
                     </a>
-                    <!-- Pinterest -->
                     <a href="#" class="top-scroll-link" aria-label="Pinterest">
                         <svg viewBox="0 0 24 24">
                             <path
@@ -157,11 +146,7 @@
                     </a>
                 </div>
             </div>
-
-            <!-- Row 2: Main Split Content -->
             <div class="hl-main-content">
-
-                <!-- Left Column: Newsletter Subscribing & Under it Copyright -->
                 <div class="hl-left-panel">
                     <div class="hl-newsletter-box">
                         <h3>Get our free weekly newsletter</h3>
@@ -177,8 +162,6 @@
                         provide financial advice.
                     </div>
                 </div>
-
-                <!-- Right Column: Nav Links (Black, under lines on hover) split into Two Columns -->
                 <div class="hl-links-grid">
                     <div class="hl-links-column">
                         <ul>
@@ -200,30 +183,30 @@
             </div>
         </div>
     </footer>
-
+    <div class="hl-modal-overlay" id="successModal">
+        <div class="hl-modal">
+            <div class="hl-modal-icon">✓</div>
+            <h4>Subscription Successful!</h4>
+            <p>Thank you for joining our community. You will now receive tips & updates directly in your inbox.</p>
+            <button class="hl-modal-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
 </body>
 
 <script>
     const modalOverlay = document.getElementById('successModal');
-
-    // Trigger custom HTML modal wrapper instead of system window
     function handleSignUp(event) {
         event.preventDefault();
         modalOverlay.classList.add('active');
     }
-
-    // Close custom HTML modal
     function closeModal() {
         modalOverlay.classList.remove('active');
     }
-
-    // Click outside modal content box to close
     modalOverlay.addEventListener('click', function (e) {
         if (e.target === modalOverlay) {
             closeModal();
         }
     });
-
     document.querySelectorAll('.top-scroll-link').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
@@ -233,18 +216,15 @@
             });
         });
     });
-
     document.querySelectorAll('.top-scroll-link2').forEach(link => {
         link.addEventListener('click', function (event) {
             event.preventDefault();
-            window.location.href = 'extra.html';
+            window.location.href = 'about.html';
         });
     });
 
-    // Wait for the HTML page to finish loading
     document.addEventListener("DOMContentLoaded", function () {
 
-        // Find the submit button and listen for a click
         const submitButton = document.getElementById("submitBtn");
         submitButton.addEventListener("click", calculateScore);
 
@@ -254,100 +234,20 @@
 
             const form = document.getElementById("cryptoQuiz");
 
-            // Grab the selected values from the radio buttons
             const q1 = form.elements["q1"].value;
             const q2 = form.elements["q2"].value;
             const q3 = form.elements["q3"].value;
 
-            // Validation: Alert if any question is skipped
             if (q1 === "" || q2 === "" || q3 === "") {
                 alert("Please answer all questions before submitting!");
                 return;
             }
 
-            // Grade the quiz
             if (q1 === "correct") score++;
             if (q2 === "correct") score++;
             if (q3 === "correct") score++;
 
-            // Show the final pop-up window
             alert("Quiz Completed!\n\nYour Score: " + score + " out of " + totalQuestions);
         }
     });
 </script>
-
-
-<style>
-    /* Quiz box container */
-    .quiz-container {
-        max-width: 800px;
-        margin: 30px auto;
-        background: #ffffff;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-
-    .question-block {
-        margin-bottom: 25px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #e2e8f0;
-        text-align: left;
-    }
-
-    .question-text {
-        font-weight: bold;
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-
-    /* Table layout guarantees horizontal alignment */
-    .options-table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    .options-table td {
-        padding: 6px 0;
-        vertical-align: middle;
-    }
-
-    /* Set specific width for the button column to prevent text wrapping issues */
-    .options-table td:first-child {
-        width: 30px;
-    }
-
-    .options-table input[type="radio"] {
-        width: 18px !important;
-        height: 18px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        display: inline-block !important;
-        cursor: pointer;
-    }
-
-    .options-table label {
-        font-size: 16px;
-        cursor: pointer;
-        display: inline-block !important;
-    }
-
-    /* Submit button styling */
-    #submitBtn {
-        display: block;
-        width: 100%;
-        background-color: #3182ce;
-        color: white;
-        border: none;
-        padding: 14px;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    #submitBtn :hover {
-        background-color: #2b6cb0;
-    }
-</style>

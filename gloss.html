@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Glossary | CryptoClarity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -14,9 +15,6 @@
 
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -35,7 +33,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="menu">
                 <li class="links"><a href="#" id="infoMark" onclick="extra()"><i class="fa fa-info-circle fa-2x"
-                    style="color: white"></i></a></li>
+                            style="color: white"></i></a></li>
                 <a href="#" id="homei" onclick="home()">
                     <img src="menuLogo.JPG" alt="Logo" class="menu-logo-img">
                 </a>
@@ -48,15 +46,15 @@
                 <li class="links"><a class="nav-word" onclick="quiz()">Quiz</a></li>
                 <li class="links"><a class="nav-word" onclick="gloss()" style="color: #5deb7a;">Glossary</a></li>
                 <li class="links"><a href="#" id="qMark" onclick="signup()"><i class="fa fa-user fa-2x"
-                    style="color: white"></i></a></li>
+                            style="color: white"></i></a></li>
             </ul>
         </div>
     </nav>
     <section class="crypto-hero-section2">
         <div class="crypto-hero-container2">
             <h1 class="crypto-hero-title2">Glossary</h1>
-            <p class="crypto-hero-subtitle2">Understanding the crypto world is much easier when you
-                break it down into these four core pillars:</p>
+            <p class="crypto-hero-subtitle2">Understanding the crypto world is much easier after
+                breaking it down into these four core pillars.</p>
         </div>
     </section>
     <br>
@@ -68,105 +66,121 @@
             <button class="filter-btn" data-filter="safety">Safety</button>
             <button class="filter-btn" data-filter="trade">Trade</button>
         </div>
-
         <div class="glossary-list">
-            <div class="glossary-item" data-category="system">
-                <span class="category-tag">System</span>
-                <h3 class="term-title">Blockchain</h3>
-                <p>A decentralized ledger that permanently records transactions across a computer network.</p>
-            </div>
-            <div class="glossary-item" data-category="system">
-                <span class="category-tag">System</span>
-                <h3 class="term-title">Smart Contracts</h3>
-                <p>Self-executing digital agreements that automatically trigger when specific conditions are
-                    met.</p>
-            </div>
-            <div class="glossary-item" data-category="system">
-                <span class="category-tag">System</span>
-                <h3 class="term-title">Decentralization</h3>
-                <p> A structure that distributes network control across a community instead of a central
-                    authority.</p>
-            </div>
-            <div class="glossary-item" data-category="system">
-                <span class="category-tag">System</span>
-                <h3 class="term-title">Gas Fees</h3>
-                <p>Small transaction processing costs paid to network validators to complete a transfer.</p>
-            </div>
-            <div class="glossary-item" data-category="system">
-                <span class="category-tag">System</span>
-                <h3 class="term-title">Node</h3>
-                <p>Any computer connected to a blockchain network that helps store data and validate transactions.</p>
-            </div>
-            <div class="glossary-item" data-category="coins">
-                <span class="category-tag">Coins</span>
-                <h3 class="term-title">Cryptocurrency</h3>
-                <p>Decentralized digital money secured by cryptography to allow peer-to-peer transactions.</p>
-            </div>
             <div class="glossary-item" data-category="coins">
                 <span class="category-tag">Coins</span>
                 <h3 class="term-title">Altcoin</h3>
                 <p>A general term used for any cryptocurrency that is not Bitcoin.</p>
             </div>
-            <div class="glossary-item" data-category="coins">
-                <span class="category-tag">Coins</span>
-                <h3 class="term-title">Token</h3>
-                <p>A digital asset built on top of an existing, separate blockchain network.</p>
+
+            <div class="glossary-item" data-category="system">
+                <span class="category-tag">System</span>
+                <h3 class="term-title">Blockchain</h3>
+                <p>A decentralized ledger that permanently records transactions across a computer network.</p>
             </div>
-            <div class="glossary-item" data-category="coins">
-                <span class="category-tag">Coins</span>
-                <h3 class="term-title">Stablecoin</h3>
-                <p>Crypto designed to maintain a steady price by being pegged to a fiat currency.</p>
-            </div>
-            <div class="glossary-item" data-category="coins">
-                <span class="category-tag">Coins</span>
-                <h3 class="term-title">NFT</h3>
-                <p>A unique digital certificate confirming ownership of a specific item, like digital art.</p>
-            </div>
-            <div class="glossary-item" data-category="safety">
-                <span class="category-tag">Safety</span>
-                <h3 class="term-title">Wallet</h3>
-                <p>A software program or physical device used to store and manage digital assets.</p>
-            </div>
-            <div class="glossary-item" data-category="safety">
-                <span class="category-tag">Safety</span>
-                <h3 class="term-title">Public Key</h3>
-                <p>A shareable digital address used by others to send crypto to your wallet.</p>
-            </div>
-            <div class="glossary-item" data-category="safety">
-                <span class="category-tag">Safety</span>
-                <h3 class="term-title">Private Key</h3>
-                <p>A secret cryptographic password that grants absolute control over your digital funds.</p>
-            </div>
+
             <div class="glossary-item" data-category="safety">
                 <span class="category-tag">Safety</span>
                 <h3 class="term-title">Cold Wallet</h3>
                 <p>A physical, offline storage device that keeps your private keys safe from hackers.</p>
             </div>
-            <div class="glossary-item" data-category="safety">
-                <span class="category-tag">Safety</span>
-                <h3 class="term-title">Seed Phrase</h3>
-                <p> A backup sequence of random words used to recover your entire crypto wallet.</p>
+
+            <div class="glossary-item" data-category="coins">
+                <span class="category-tag">Coins</span>
+                <h3 class="term-title">Cryptocurrency</h3>
+                <p>Decentralized digital money secured by cryptography to allow peer-to-peer transactions.</p>
             </div>
+
+            <div class="glossary-item" data-category="system">
+                <span class="category-tag">System</span>
+                <h3 class="term-title">Decentralization</h3>
+                <p>A structure that distributes network control across a community instead of a central authority.</p>
+            </div>
+
+            <div class="glossary-item" data-category="trade">
+                <span class="category-tag">Trade</span>
+                <h3 class="term-title">FOMO</h3>
+                <p>(Fear of Missing Out) The psychological fear of missing out that drives people to buy assets during price spikes.</p>
+            </div>
+
+            <div class="glossary-item" data-category="trade">
+                <span class="category-tag">Trade</span>
+                <h3 class="term-title">FUD</h3>
+                <p>(Fear, Uncertainty, and Doubt) Negative market rumors and fear spread intentionally to drive down cryptocurrency prices.</p>
+            </div>
+
+            <div class="glossary-item" data-category="system">
+                <span class="category-tag">System</span>
+                <h3 class="term-title">Gas Fees</h3>
+                <p>Small transaction processing costs paid to network validators to complete a transfer.</p>
+            </div>
+
+            <div class="glossary-item" data-category="trade">
+                <span class="category-tag">Trade</span>
+                <h3 class="term-title">HODL</h3>
+                <p>(Hold On for Dear Life) A popular slang term that means holding onto your crypto instead of selling it.</p>
+            </div>
+
             <div class="glossary-item" data-category="trade">
                 <span class="category-tag">Trade</span>
                 <h3 class="term-title">Market Cap</h3>
                 <p>The total market value of a cryptocurrency based on its current price and supply.</p>
             </div>
-            <div class="glossary-item" data-category="trade">
-                <span class="category-tag">Trade</span>
-                <h3 class="term-title">HODL</h3>
-                <p> A popular slang term that means holding onto your crypto instead of selling it.</p>
+
+            <div class="glossary-item" data-category="coins">
+                <span class="category-tag">Coins</span>
+                <h3 class="term-title">NFT</h3>
+                <p>(Non-Fungible Token) A unique digital certificate confirming ownership of a specific item, like digital art, recorded on a blockchain.</p>
             </div>
-            <div class="glossary-item" data-category="trade">
-                <span class="category-tag">Trade</span>
-                <h3 class="term-title">FOMO</h3>
-                <p>The psychological fear of missing out that drives people to buy assets during price spikes.</p>
+
+            <div class="glossary-item" data-category="system">
+                <span class="category-tag">System</span>
+                <h3 class="term-title">Node</h3>
+                <p>Any computer connected to a blockchain network that helps store data and validate transactions.</p>
             </div>
-            <div class="glossary-item" data-category="trade">
-                <span class="category-tag">Trade</span>
-                <h3 class="term-title">FUD</h3>
-                <p>Negative market rumors and fear spread intentionally to drive down cryptocurrency prices.</p>
+
+            <div class="glossary-item" data-category="safety">
+                <span class="category-tag">Safety</span>
+                <h3 class="term-title">Private Key</h3>
+                <p>A secret cryptographic password that grants absolute control over your digital funds.</p>
             </div>
+
+            <div class="glossary-item" data-category="safety">
+                <span class="category-tag">Safety</span>
+                <h3 class="term-title">Public Key</h3>
+                <p>A shareable digital address used by others to send crypto to your wallet.</p>
+            </div>
+
+            <div class="glossary-item" data-category="safety">
+                <span class="category-tag">Safety</span>
+                <h3 class="term-title">Seed Phrase</h3>
+                <p>A backup sequence of random words used to recover your entire crypto wallet.</p>
+            </div>
+
+            <div class="glossary-item" data-category="system">
+                <span class="category-tag">System</span>
+                <h3 class="term-title">Smart Contracts</h3>
+                <p>Self-executing digital agreements that automatically trigger when specific conditions are met.</p>
+            </div>
+
+            <div class="glossary-item" data-category="coins">
+                <span class="category-tag">Coins</span>
+                <h3 class="term-title">Stablecoin</h3>
+                <p>Crypto designed to maintain a steady price by being pegged to a fiat currency.</p>
+            </div>
+
+            <div class="glossary-item" data-category="coins">
+                <span class="category-tag">Coins</span>
+                <h3 class="term-title">Token</h3>
+                <p>A digital asset built on top of an existing, separate blockchain network.</p>
+            </div>
+
+            <div class="glossary-item" data-category="safety">
+                <span class="category-tag">Safety</span>
+                <h3 class="term-title">Wallet</h3>
+                <p>A software program or physical device used to store and manage digital assets.</p>
+            </div>
+
             <div class="glossary-item" data-category="trade">
                 <span class="category-tag">Trade</span>
                 <h3 class="term-title">Whale</h3>
@@ -260,22 +274,33 @@
 <script>
     const modalOverlay = document.getElementById('successModal');
 
-    // Trigger custom HTML modal wrapper instead of system window
     function handleSignUp(event) {
         event.preventDefault();
         modalOverlay.classList.add('active');
     }
 
-    // Close custom HTML modal
     function closeModal() {
         modalOverlay.classList.remove('active');
     }
-
-    // Click outside modal content box to close
     modalOverlay.addEventListener('click', function (e) {
         if (e.target === modalOverlay) {
             closeModal();
         }
+    });
+    document.querySelectorAll('.top-scroll-link').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+    document.querySelectorAll('.top-scroll-link2').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'about.html';
+        });
     });
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -300,93 +325,4 @@
             });
         });
     });
-
-    document.querySelectorAll('.top-scroll-link').forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    document.querySelectorAll('.top-scroll-link2').forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            window.location.href = 'extra.html';
-        });
-    });
 </script>
-
-<style>
-    h1 {
-        text-align: center;
-        color: #1a202c;
-    }
-
-    .filter-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-bottom: 30px;
-    }
-
-    .filter-btn {
-        background-color: #edf2f7;
-        border: 2px solid transparent;
-        color: #4a5568;
-        padding: 8px 16px;
-        font-size: 14px;
-        font-weight: bold;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .filter-btn:hover {
-        background-color: #cbd5e0;
-    }
-
-    .filter-btn.active {
-        background-color: #3182ce;
-        color: white;
-    }
-
-    .glossary-list {
-        margin-top: 20px;
-    }
-
-    .glossary-item {
-        background: #fff;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 15px;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        width: 900px;
-    }
-
-    .glossary-item.hidden {
-        display: none;
-    }
-
-    .term-title {
-        margin: 0 0 8px 0;
-        font-size: 20px;
-        color: #2d3748;
-    }
-
-    .category-tag {
-        display: inline-block;
-        background-color: #e2e8f0;
-        color: #4a5568;
-        font-size: 11px;
-        text-transform: uppercase;
-        font-weight: bold;
-        padding: 2px 8px;
-        border-radius: 4px;
-        margin-bottom: 10px;
-    }
-</style>

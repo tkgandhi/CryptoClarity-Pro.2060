@@ -46,23 +46,16 @@ main {
 
 .links a {
   color: #f5f2f2;
-  /* default muted color for unhovered links */
   text-decoration: none;
   transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
-  /* smooth transition effect */
   font-weight: 600;
-  /* Smoothly switches to bold */
 }
 
-/* apply the highlight when the mouse hovers over the element */
 .links a:hover {
   color: #5deb7a !important;
-  /* changes the text to bright white */
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  /* adds a subtle, high-tech glow */
   cursor: pointer;
   font-weight: 625;
-  /* Smoothly switches to bold */
 }
 
 #words {
@@ -107,6 +100,11 @@ main {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+.fade-in-image {
+  animation: fadeIn 0.75s ease-in-out;
+  opacity: 1;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -117,33 +115,115 @@ main {
   }
 }
 
-.fade-in-image {
-  animation: fadeIn 0.75s ease-in-out;
-  opacity: 1;
-}
-
 #header {
   color: black;
 }
 
 .menu-logo-img {
   height: 55px;
-  /* Sets an ideal vertical profile for nav bars */
   width: auto;
-  /* Keeps the logo dimensions perfectly proportional */
   display: inline-block;
   transition: transform 0.2s ease;
-  /* Adds a smooth transition if you want effects */
 }
 
-/* Optional: Subtle shrink effect when clicking the logo link */
 #homei:active .menu-logo-img {
   transform: scale(0.95);
 }
 
-/*...........................................................................................*/
+.crypto-ticker-item span {
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.crypto-hero-section {
+  background-color: #0f172a;
+  padding: 2.5px 0;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.crypto-hero-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.crypto-hero-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 7.5px;
+  letter-spacing: -0.02em;
+}
+
+.highlight-text {
+  color: #5deb7a;
+}
+
+.crypto-hero-subtitle {
+  font-size: 18px;
+  color: #c8d8ec;
+  line-height: 1.6;
+  max-width: 1500px;
+  margin-bottom: 10px;
+  font-weight: 625;
+}
+
+.crypto-hero-section2 {
+  background-color: #0f172a;
+  padding: 5px 24px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.crypto-hero-container2 {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.crypto-hero-title2 {
+  font-size: 35px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  letter-spacing: -0.02em;
+}
+
+.crypto-hero-subtitle2 {
+  font-size: 20px;
+  color: #d4e0f0;
+  line-height: 1.6;
+  max-width: 1500px;
+  margin-bottom: 25px;
+  font-weight: 625;
+}
+
+.crypto-hero-subtitle3 {
+  font-size: 17px;
+  color: #94a3b8;
+  line-height: 1.6;
+  max-width: 1500px;
+  margin-bottom: 25px;
+}
+
+/* Mobile Responsive Optimization */
+@media (max-width: 600px) {
+  .crypto-hero-section {
+    padding: 80px 16px;
+  }
+
+  .crypto-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .crypto-hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/*...................................................................................................*/
 /*HOME/INDEX*/
-/* Masking container */
 .crypto-ticker-wrap {
   width: 100%;
   overflow: hidden;
@@ -153,13 +233,11 @@ main {
   padding: 19px 0;
 }
 
-/* Flexbox slider track */
 .crypto-ticker-track {
   display: flex;
   width: max-content;
 }
 
-/* Content lists animating identically */
 .crypto-ticker-list {
   display: flex;
   align-items: center;
@@ -173,10 +251,9 @@ main {
   align-items: center;
   gap: 3rem;
   padding-right: 3rem;
-  animation: cryptoMarquee 40s linear infinite;
+  animation: cryptoMarquee 35s linear infinite;
 }
 
-/* UX feature to freeze animation on mouseover */
 .crypto-ticker-wrap:hover .crypto-ticker-list {
   animation-play-state: paused;
 }
@@ -185,7 +262,6 @@ main {
   animation-play-state: paused;
 }
 
-/* Text and element styling */
 .crypto-ticker-item {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 14px;
@@ -198,14 +274,12 @@ main {
   gap: 8px;
 }
 
-/* Separator diamond */
 .crypto-ticker-diamond {
   width: 5px;
   height: 5px;
   transform: rotate(45deg);
 }
 
-/* Linear transformation animation loop */
 @keyframes cryptoMarquee {
   0% {
     transform: translateX(0%);
@@ -213,108 +287,6 @@ main {
 
   100% {
     transform: translateX(-100%);
-  }
-}
-
-/* Container Setup with Custom Color and Ample Whitespace */
-.crypto-hero-section {
-  background-color: #0f172a;
-  /* Deep navy slate background */
-  padding: 2.5px 0;
-  /* Generous breathing room above and below */
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.crypto-hero-container {
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-/* Typography styling for dark mode readability */
-.crypto-hero-title {
-  font-size: 40px;
-  font-weight: 800;
-  color: #ffffff;
-  /* Crisp white for strong contrast */
-  line-height: 1.2;
-  margin-bottom: 7.5px;
-  letter-spacing: -0.02em;
-}
-
-/* Vibrant Crypto Highlight Tone */
-.highlight-text {
-  color: #5deb7a;
-  /* Bright crypto gold color accent */
-}
-
-.crypto-hero-subtitle {
-  font-size: 18px;
-  color: #c8d8ec;
-  /* Soft muted slate-gray text */
-  line-height: 1.6;
-  max-width: 1500px;
-  margin-bottom: 10px;
-  font-weight: 625;
-}
-
-.crypto-hero-section2 {
-  background-color: #0f172a;
-  /* Deep navy slate background */
-  padding: 5px 24px;
-  /* Generous breathing room above and below */
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.crypto-hero-container2 {
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-/* Typography styling for dark mode readability */
-.crypto-hero-title2 {
-  font-size: 35px;
-  font-weight: 800;
-  color: #ffffff;
-  /* Crisp white for strong contrast */
-  line-height: 1.2;
-  margin-bottom: 15px;
-  letter-spacing: -0.02em;
-}
-
-.crypto-hero-subtitle2 {
-  font-size: 20px;
-  color: #d4e0f0;
-  /* Soft muted slate-gray text */
-  line-height: 1.6;
-  max-width: 1500px;
-  margin-bottom: 25px;
-  font-weight: 625;
-}
-
-.crypto-hero-subtitle3 {
-  font-size: 17px;
-  color: #94a3b8;
-  /* Soft muted slate-gray text */
-  line-height: 1.6;
-  max-width: 1500px;
-  margin-bottom: 25px;
-}
-
-/* Mobile Responsive Optimization */
-@media (max-width: 600px) {
-  .crypto-hero-section {
-    padding: 80px 16px;
-    /* Slightly tighter but still spacious on small screens */
-  }
-
-  .crypto-hero-title {
-    font-size: 2.5rem;
-  }
-
-  .crypto-hero-subtitle {
-    font-size: 1.1rem;
   }
 }
 
@@ -366,8 +338,8 @@ main {
   padding-bottom: 20px;
 }
 
-/*...........................................................................................*/
-/*OVERVIEW/INTRODUCTION*/
+/*...................................................................................................*/
+/*INTRODUCTION*/
 .hero {
   text-align: center;
   padding: 80px 20px;
@@ -417,7 +389,6 @@ main {
   color: white;
 }
 
-/* Modified from ID to Class selector */
 .introtext_section {
   display: flex;
   align-items: flex-start;
@@ -428,14 +399,12 @@ main {
   margin-left: 120px;
 }
 
-/* Updated targeting rule */
 .introtext_section h3 {
   text-align: left;
   margin-top: 5px;
   width: 350px;
 }
 
-/* Rules for the new controls div layout */
 .tts-controls {
   margin-top: 10px;
   display: flex;
@@ -459,10 +428,8 @@ li {
   font-size: 17px;
 }
 
-
-/*...........................................................................................*/
+/*...................................................................................................*/
 /*PURPOSE*/
-
 .purpose_section {
   display: flex;
   flex-direction: column;
@@ -529,10 +496,9 @@ li {
   z-index: 1;
 }
 
-/*...........................................................................................*/
+/*...................................................................................................*/
 /*DLTs*/
-
-.teams8 {
+.dltddhs {
   font-size: 17px;
   padding: 8px 22px;
   border-radius: 10px;
@@ -545,11 +511,11 @@ li {
   cursor: pointer;
 }
 
-.teams8 i {
+.dltddhs i {
   float: right;
 }
 
-#ahhinfo {
+#ddinfo {
   font-size: 16px;
   text-align: left;
   margin-left: 170px;
@@ -560,12 +526,6 @@ li {
   padding-bottom: 20px;
   width: 75%;
   color: black;
-}
-
-#dltsection {
-  color: white;
-  padding: 40px 0;
-  width: 100%;
 }
 
 .main-title {
@@ -762,13 +722,8 @@ li {
   }
 }
 
-/*...........................................................................................*/
+/*...................................................................................................*/
 /*HISTORY*/
-
-#history_section {
-  color: black;
-}
-
 .timeline {
   max-width: 700px;
   margin: 100px auto 200px;
@@ -806,7 +761,6 @@ li {
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.5s ease;
-  z-index: 1;
 }
 
 .reveal {
@@ -847,7 +801,7 @@ li {
   cursor: pointer;
 }
 
-/*...........................................................................................*/
+/*...................................................................................................*/
 /*TYPES*/
 .image-container {
   display: grid;
@@ -993,10 +947,186 @@ li {
   color: #2c3e50;
 }
 
-/*...........................................................................................*/
+/*...................................................................................................*/
+/*RISKS/VIDEO*/
+#videoinfo {
+  font-size: 18px;
+  text-align: left;
+  padding-bottom: 20px;
+  width: 500px;
+}
+
+.video {
+  width: 400px;
+  height: auto;
+}
+
+#risksInfo {
+  font-size: 17px;
+  text-align: justify;
+  margin-left: 300px;
+}
+
+/*...................................................................................................*/
+/*QUIZ*/
+.quiz-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question-block {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.question-text {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.options-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.options-table td {
+  padding: 6px 0;
+  vertical-align: middle;
+}
+
+.options-table td:first-child {
+  width: 30px;
+}
+
+.options-table input[type="radio"] {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  cursor: pointer;
+}
+
+.options-table label {
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block !important;
+}
+
+#submitBtn {
+  display: block;
+  width: 100%;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitBtn :hover {
+  background-color: #2b6cb0;
+}
+
+/*...................................................................................................*/
+/*GLOSSARY*/
+#topBtn {
+  display: block;
+  position: fixed;
+  width: 63px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#topBtn:hover {
+  background-color: #555;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background-color: #edf2f7;
+  border: 2px solid transparent;
+  color: #4a5568;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #cbd5e0;
+}
+
+.filter-btn.active {
+  background-color: #3182ce;
+  color: white;
+}
+
+.glossary-list {
+  margin-top: 20px;
+}
+
+.glossary-item {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 900px;
+}
+
+.glossary-item.hidden {
+  display: none;
+}
+
+.term-title {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #2d3748;
+}
+
+.category-tag {
+  display: inline-block;
+  background-color: #e2e8f0;
+  color: #4a5568;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/*...................................................................................................*/
 /*SIGNUP*/
-
-
 .auth-container {
   background: #ffffff;
   border-radius: 12px;
@@ -1004,12 +1134,6 @@ li {
   width: 100%;
   max-width: 500px;
   padding: 30px;
-}
-
-h2 {
-  margin: 0 0 20px 0;
-  color: #1a202c;
-  text-align: center;
 }
 
 .form-box {
@@ -1028,7 +1152,7 @@ h2 {
 label {
   display: block;
   margin-bottom: 6px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   color: #4a5568;
 }
@@ -1043,7 +1167,6 @@ input {
   transition: border-color 0.2s;
 }
 
-/* Real-time status border styling */
 input:focus {
   border-color: #3182ce;
 }
@@ -1060,7 +1183,7 @@ input.invalid {
 
 .error-message {
   color: #e53e3e;
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 4px;
   min-height: 18px;
 }
@@ -1100,7 +1223,6 @@ input.invalid {
   text-decoration: underline;
 }
 
-/* --- POP-UP MODAL STYLES --- */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -1163,85 +1285,12 @@ input.invalid {
   cursor: pointer;
 }
 
-/*...........................................................................................*/
-/*GLOSSARY*/
-#listening {
-  text-align: left;
-  margin-left: 75px;
-}
-
-#speechtext {
-  font-size: 15px;
-}
-
-#topBtn {
-  display: block;
-  position: fixed;
-  width: 63px;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 18px;
-}
-
-#topBtn:hover {
-  background-color: #555;
-}
-
-.footer {
-  font-size: 18px;
-  text-align: center;
-}
-
-#typeinfo3 {
-  font-size: 18px;
-  text-align: justify;
-  margin-left: 40px;
-  margin-right: 80px;
-  padding: 20px;
-}
-
-#typeinfo4 {
-  font-size: 17px;
-  text-align: justify;
-  margin-left: 300px;
-}
-
-#videoinfo {
-  font-size: 18px;
-  text-align: left;
-  padding-bottom: 20px;
-  width: 500px;
-}
-
-.video {
-  width: 400px;
-  height: auto;
-}
-
-/*____________________________________________________________________________________________________*/
-
-:root {
-  --hl-navy: #1a1a1a;
-  /* Darker black color for better contrast */
-  --hl-gray-dark: #667085;
-  --hl-teal: #007f8a;
-  --hl-teal-hover: #005f67;
-  --hl-border: #e4e7ec;
-}
-
-/* Footer Container */
+/*...................................................................................................*/
+/*FOOTER*/
 .hl-footer {
   background-color: #000000;
   border: 3px solid #337841;
-  color: var(--hl-navy);
+  color: #1a1a1a;
   padding-top: 40px;
   padding-bottom: 20px;
   font-size: 14px;
@@ -1256,7 +1305,6 @@ input.invalid {
   gap: 40px;
 }
 
-/* Row 1: Brand & Social Logos side-by-side */
 .hl-brand-row {
   display: flex;
   align-items: center;
@@ -1266,7 +1314,7 @@ input.invalid {
 .hl-brand-row h2 {
   font-size: 28px;
   margin: 0;
-  color: var(--hl-navy);
+  color: #1a1a1a;
   font-weight: 800;
   letter-spacing: -0.5px;
 }
@@ -1294,7 +1342,6 @@ input.invalid {
   fill: currentColor;
 }
 
-/* Row 2: Split Layout (Left: Newsletter/Copyright, Right: Links) */
 .hl-main-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1302,7 +1349,6 @@ input.invalid {
   align-items: start;
 }
 
-/* Left Side Elements */
 .hl-left-panel {
   text-align: left;
   display: flex;
@@ -1333,7 +1379,7 @@ input.invalid {
 .hl-newsletter-form input[type="email"] {
   flex: 1;
   padding: 12px 16px;
-  border: 1px solid var(--hl-border);
+  border: 1px solid #e4e7ec;
   font-size: 14px;
   outline: none;
   border-radius: 4px;
@@ -1341,7 +1387,7 @@ input.invalid {
 }
 
 .hl-newsletter-form input[type="email"]:focus {
-  border-color: var(--hl-teal);
+  border-color: #007f8a;
 }
 
 .hl-newsletter-form button {
@@ -1367,7 +1413,6 @@ input.invalid {
   margin-top: -50px;
 }
 
-/* Right Side Elements (2-Column Grid) */
 .hl-links-grid {
   margin-top: 15px;
   display: grid;
@@ -1389,7 +1434,6 @@ input.invalid {
 
 .hl-links-column a {
   color: white;
-  /* Changed link color to black */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
@@ -1398,19 +1442,16 @@ input.invalid {
 .hl-links-column a:hover {
   color: #5deb7a;
   text-decoration: underline;
-  /* Added underline on hover */
 }
 
-/* Row 3: Bottom Disclaimer */
 .hl-medical-disclaimer {
-  border-top: 1px solid var(--hl-border);
+  border-top: 1px solid #e4e7ec;
   padding-top: 25px;
-  color: var(--hl-gray-dark);
+  color: #667085;
   font-size: 12px;
   margin: 0;
 }
 
-/* In-Website Custom Popup (Modal) */
 .hl-modal-overlay {
   position: fixed;
   top: 0;
@@ -1450,24 +1491,24 @@ input.invalid {
 
 .hl-modal-icon {
   font-size: 40px;
-  color: var(--hl-teal);
+  color: #007f8a;
   margin-bottom: 15px;
 }
 
 .hl-modal h4 {
   margin: 0 0 10px 0;
   font-size: 20px;
-  color: var(--hl-navy);
+  color: #1a1a1a;
 }
 
 .hl-modal p {
   margin: 0 0 20px 0;
-  color: var(--hl-gray-dark);
+  color: #667085;
   font-size: 14px;
 }
 
 .hl-modal-close {
-  background-color: var(--hl-teal);
+  background-color: #007f8a;
   color: white;
   border: none;
   padding: 10px 24px;
@@ -1478,10 +1519,9 @@ input.invalid {
 }
 
 .hl-modal-close:hover {
-  background-color: var(--hl-teal-hover);
+  background-color: #005f67;
 }
 
-/* Responsive Breakpoints */
 @media (max-width: 768px) {
   .hl-main-content {
     grid-template-columns: 1fr;

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
   <title>DLTs | CryptoClarity</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -14,9 +15,6 @@
 
   <link
     href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
 </head>
 
@@ -97,20 +95,20 @@
     </div>
   </div>
   <br>
-  <div class="bg-primary teams8" data-toggle="collapse" data-target="#apptype">
+  <div class="bg-primary dltddhs" data-toggle="collapse" data-target="#apptype">
     </span>What is a Distributed Ledger?<i class="fa fa-sort-desc"></i></div>
   <div id="apptype" class="collapse">
-    <h3 id="ahhinfo">
+    <h3 id="ddinfo">
       A distributed ledger is a digital record of transactions that is shared across many computers,
       called nodes. Each node stores a copy of the ledger, so no single organization controls the data. This makes the
       system more reliable and transparent.</h3>
   </div>
   <br>
   <section id="alltypes">
-    <div class="bg-primary teams8" data-toggle="collapse" data-target="#nettype">
+    <div class="bg-primary dltddhs" data-toggle="collapse" data-target="#nettype">
       </span>How Do DLTs Record and Share Transactions? <i class="fa fa-sort-desc"></i> </div>
     <div id="nettype" class="collapse">
-      <h3 id="ahhinfo">
+      <h3 id="ddinfo">
         When a transaction occurs, it is broadcast to all nodes in the network. The nodes verify the
         transaction and update their copies of the ledger once agreement is reached. This keeps the data
         synchronized across the network.</h3>
@@ -118,10 +116,10 @@
   </section>
   <br>
   <section id="alltypes">
-    <div class="bg-primary teams8" data-toggle="collapse" data-target="#cloudtype">
+    <div class="bg-primary dltddhs" data-toggle="collapse" data-target="#cloudtype">
       </span>What Is Consensus and Why Is It Important? <i class="fa fa-sort-desc"></i> </div>
     <div id="cloudtype" class="collapse">
-      <h3 id="ahhinfo">
+      <h3 id="ddinfo">
         Consensus is the process nodes use to agree on which transactions are valid. It prevents fraud
         and ensures all participants record the same information. Different DLTs use methods like Proof
         of Work or Proof of Stake.</h3>
@@ -129,10 +127,10 @@
   </section>
   <br>
   <section id="alltypes">
-    <div class="bg-primary teams8" data-toggle="collapse" data-target="#citype">
+    <div class="bg-primary dltddhs" data-toggle="collapse" data-target="#citype">
       </span>Why Are Distributed Ledgers Secure?<i class="fa fa-sort-desc"></i> </div>
     <div id="citype" class="collapse">
-      <h3 id="ahhinfo">
+      <h3 id="ddinfo">
         DLTs use cryptography and decentralization to protect data. Because the ledger is shared across
         many nodes, altering a record would require changing most copies at the same time. This makes
         tampering extremely difficult.</h3>
@@ -140,10 +138,10 @@
   </section>
   <br>
   <section id="alltypes">
-    <div class="bg-primary teams8" data-toggle="collapse" data-target="#iottype">
+    <div class="bg-primary dltddhs" data-toggle="collapse" data-target="#iottype">
       </span>Are All Distributed Ledgers Blockchains?<i class="fa fa-sort-desc"></i> </div>
     <div id="iottype" class="collapse">
-      <h3 id="ahhinfo">
+      <h3 id="ddinfo">
         Not all distributed ledgers are blockchains. While blockchains store data in linked blocks, some
         DLTs use other structures, such as Directed Acyclic Graphs (DAGs), to improve speed and scalability.</h3>
     </div>
@@ -235,27 +233,36 @@
 
 <script>
   const modalOverlay = document.getElementById('successModal');
-
-  // Trigger custom HTML modal wrapper instead of system window
   function handleSignUp(event) {
     event.preventDefault();
     modalOverlay.classList.add('active');
   }
-
-  // Close custom HTML modal
   function closeModal() {
     modalOverlay.classList.remove('active');
   }
-
-  // Click outside modal content box to close
   modalOverlay.addEventListener('click', function (e) {
     if (e.target === modalOverlay) {
       closeModal();
     }
   });
+  document.querySelectorAll('.top-scroll-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  document.querySelectorAll('.top-scroll-link2').forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.location.href = 'about.html';
+    });
+  });
 
   const triggers = document.querySelectorAll('[data-toggle="collapse"]');
-
   triggers.forEach(trigger => {
     trigger.addEventListener('click', function () {
       const targetSelector = this.getAttribute('data-target');
@@ -328,21 +335,5 @@
         btn.onclick = () => location.reload();
       }, 500);
     }
-  });
-  document.querySelectorAll('.top-scroll-link').forEach(link => {
-    link.addEventListener('click', function (event) {
-      event.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  document.querySelectorAll('.top-scroll-link2').forEach(link => {
-    link.addEventListener('click', function (event) {
-      event.preventDefault();
-      window.location.href = 'extra.html';
-    });
   });
 </script>
