@@ -752,6 +752,7 @@ li {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.5s ease;
   z-index: 1;
+  font-size:16px;
 }
 
 #event-9 {
@@ -1073,7 +1074,7 @@ li {
   border: 2px solid transparent;
   color: #4a5568;
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
@@ -1101,6 +1102,13 @@ li {
   margin-bottom: 15px;
   transition: opacity 0.3s ease, transform 0.3s ease;
   width: 900px;
+  font-size:15px;
+}
+
+.glossary-item p {
+  max-width: 700px;
+  text-align: left;
+  margin-left:100px;
 }
 
 .glossary-item.hidden {
@@ -1117,12 +1125,13 @@ li {
   display: inline-block;
   background-color: #e2e8f0;
   color: #4a5568;
-  font-size: 11px;
+  font-size: 13px;
   text-transform: uppercase;
   font-weight: bold;
   padding: 2px 8px;
   border-radius: 4px;
   margin-bottom: 10px;
+  margin-right:700px;
 }
 
 /*...................................................................................................*/
